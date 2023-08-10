@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "strict": true,
+    "sourceMap": true,
+    "target": "esnext",
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "baseUrl": ".",
+    "paths": {
+    "@*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+    },
+    "noImplicitAny": false
+
+  },
+  "exclude": [
+    "node_modules"
+  ]
+
+}
