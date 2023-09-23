@@ -1,19 +1,19 @@
 import classNames from 'classnames';
 import React, { ReactNode } from 'react';
 
-interface IContent {
+interface IContainer {
   className?: string;
   children: ReactNode
 }
-const Content = ({
+const Container = ({
   className,
   children
-}:IContent) => {
+}:IContainer) => {
   return (
-    <div className={classNames('h-full', className)}>
+    <div className={classNames('h-full px-5', className)}>
       {children}
     </div>
   );
 };
 
-export default React.memo(Content);
+export default React.memo(Container);

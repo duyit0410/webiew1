@@ -1,15 +1,17 @@
 import ProfileHeader from "@components/organisms/Header/ProfileHeader";
-import Content from "@layouts/Content";
+import Content from "@layouts/Container";
 import React, { memo } from "react";
-import ProfileFeatureUi from "./ProfileFeatureUi";
-import Header from "@components/atoms/Header";
+import ProfileFeature from "./ProfileFeature";
+import { useAppDispatch, useAppSelector } from "@hooks/useRedux";
 
 const ProfileContainer = () => {
+  const dispatch = useAppDispatch()
+  const {isAuth} = useAppSelector(i => i.auth);
+
   return (
     <>
-     <Header isAuth/>
       <Content>
-        <ProfileFeatureUi />
+        <ProfileFeature />
       </Content>
     </>
   );

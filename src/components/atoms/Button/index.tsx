@@ -1,32 +1,33 @@
 import classNames from "classnames";
 import React, { ButtonHTMLAttributes, ReactNode, memo } from "react";
 
-interface IButton extends ButtonHTMLAttributes<HTMLButtonElement>{
+interface IButton{
   children: ReactNode;
   className?: string;
-  ctBgColor?: boolean;
-  ctSize?: boolean;
-  ctRadius?: boolean;
-  ctText?: boolean
+  bgColor?: boolean;
+  size?: boolean;
+  radius?: boolean;
+  styleText?: boolean;
+  onClick?: () => void
 }
 const Button = ({
   children,
   className,
-  ctBgColor,
-  ctSize,
-  ctRadius,
-  ctText,
-  ...rest
+  bgColor,
+  size,
+  radius,
+  styleText,
+  onClick
 }: IButton) => {
   return (
     <button
-      {...rest}
+      onClick={onClick}
       className={classNames(
         "",
-        ctBgColor ?? "bg-app",
-        ctSize ?? "h-10 px-3",
-        ctRadius ?? "rounded-lg",
-        ctText ?? 'font-bold text-[16px] text-white',
+        bgColor ?? "bg-main",
+        size ?? "h-8 px-3",
+        radius ?? "rounded-lg",
+        styleText ?? 'font-bold text-[16px] text-white',
         className
       )}
     >

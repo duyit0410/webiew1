@@ -7,7 +7,7 @@ const IconWrapper = ({
 children
 }:IIconWrapper) => {
   return (
-    <div className='bg-app/30 text-app flex items-center justify-center aspect-square h-8 rounded-full '>
+    <div className='h-12 aspect-square rounded-full bg-main/30 text-main flex items-center justify-center text-[24px]'>
       {children}
     </div>
   );

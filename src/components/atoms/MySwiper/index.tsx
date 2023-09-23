@@ -11,7 +11,7 @@ const MySwiper = ({
   data
 }:IMySwiper) => {
   return (
- <div className='swiper-wraper h-[120px] w-full'>
+ <div className='swiper-wraper h-[160px] w-full'>
      <Swiper pagination={true} modules={[Pagination, Autoplay]} loop className="mySwiper w-full h-full"
      autoplay
      >

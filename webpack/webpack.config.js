@@ -29,6 +29,9 @@ module.exports = {
               "styles",
               "pages",
               "containers",
+              "api",
+              "util",
+              "redux"
             ]),
           },
         },

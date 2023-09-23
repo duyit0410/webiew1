@@ -1,33 +1,33 @@
 import Button from "@components/atoms/Button";
+import Text from "@components/atoms/Text/Txt";
 import React, { memo, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 
-interface IAuth {
-  login?: () => void;
-  register: () => void;
-}
-const Auth = ({ register, login }: IAuth) => {
+const Auth = () => {
+  const navigate = useNavigate()
+
   const buttonData = useMemo(
     () => [
       {
         text: "login",
-        onClick: login,
+        onClick: () => navigate('/login'),
       },
       {
         text: "register",
-        onClick: register,
+        onClick: () => navigate('/register'),
       },
     ],
-    [register, login]
+    []
   );
 
   return (
     <div className="flex justify-between w-max gap-2">
     {buttonData.map((item, i) => (
       <Button
-      ctBgColor
-      ctText
-      className=" text-app capitalize bg-white border-1 border-app border-solid"
-      key={i} children={item.text} onClick={item.onClick} />
+      bgColor
+      styleText
+      className=" text-main capitalize bg-white border-1 border-app border-solid"
+      key={i} children={<Text text={item.text}/>} onClick={item.onClick} />
     ))}
   </div>
   );

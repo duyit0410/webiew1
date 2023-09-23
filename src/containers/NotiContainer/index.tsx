@@ -1,4 +1,4 @@
-import Content from '@layouts/Content';
+import Content from '@layouts/Container';
 import React, { memo } from 'react';
 
 const NotiContainer = () => {

@@ -1,11 +1,11 @@
-import Content from '@layouts/Content';
+import Container from '@layouts/Container';
 import React, { memo } from 'react';
 
 const CategoriesContainer = () => {
   return (
-  <Content>
+  <Container>
     cate
-  </Content>
+  </Container>
   );
 };
 
